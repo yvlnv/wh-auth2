@@ -1,0 +1,8 @@
+@startuml myuml
+Client -> "OAuth server": request without authorization code
+"OAuth server" --> "OAuth server": validate request
+"OAuth server" -> Client: auth code granted
+Client -> Server: request with auth code
+Server --> Server: validate auth code
+Server -> Client: response
+@enduml
